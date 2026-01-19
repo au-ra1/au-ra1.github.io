@@ -6,6 +6,8 @@ button.addEventListener("click", () => {
     const current = getTheme();
     const newTheme = current === "dark" ? "light" : "dark";
     const buttonText = newTheme === "dark" ? "☼" : "☾";
+    const newTitle = newTheme === "dark" ? "Praise the sun!" : "Praise the moon!";
+    button.setAttribute('title', newTitle);
     button.innerHTML = buttonText;
     updateLocalStorage(newTheme);
     updateHTML(newTheme);

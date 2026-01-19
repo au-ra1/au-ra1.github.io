@@ -1,6 +1,6 @@
 
 
-const contentPath = "/content/";
+const contentPath = "./content/";
 const posts = ["1.md", "2.md"]; 
 const postsListElements = document.getElementById("posts-list");
 
@@ -40,7 +40,7 @@ async function getPosts(): Promise<void> {
         const link = document.createElement("a");
         link.href = contentPath + post.file;
         link.textContent = `${post.title} - ${post.date}`;
-        //link.target = "_blank";
+        link.target = "_blank";
         li.appendChild(link);
         postsListElements.appendChild(li);
     });
