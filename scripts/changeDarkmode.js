@@ -7,14 +7,13 @@ button.addEventListener("click", () => {
     const newTheme = current === "dark" ? "light" : "dark";
     const buttonText = newTheme === "dark" ? "☼" : "☾";
     const newTitle = newTheme === "dark" ? "Praise the sun!" : "Praise the moon!";
-    button.setAttribute('title', newTitle);
+    button.setAttribute("title", newTitle);
     button.innerHTML = buttonText;
     updateLocalStorage(newTheme);
     updateHTML(newTheme);
 });
 function getTheme() {
-    var _a;
-    const a = (_a = document.querySelector("html")) === null || _a === void 0 ? void 0 : _a.getAttribute("data-theme");
+    const a = document.querySelector("html")?.getAttribute("data-theme");
     return a;
 }
 function updateLocalStorage(theme) {

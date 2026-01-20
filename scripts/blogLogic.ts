@@ -1,7 +1,7 @@
 
 
 const contentPath = "./content/";
-const posts = ["1.md", "2.md"]; 
+const posts = ["1.md"]; 
 const postsListElements = document.getElementById("posts-list");
 
 interface Post {
@@ -38,9 +38,9 @@ async function getPosts(): Promise<void> {
     postsList.forEach(post => {
         const li = document.createElement("li");
         const link = document.createElement("a");
-        link.href = contentPath + post.file;
+        link.href = `./currentBlog.html?post=${encodeURIComponent("/content/" + post.file)}`;
         link.textContent = `${post.title} - ${post.date}`;
-        link.target = "_blank";
+        link.target = "";
         li.appendChild(link);
         postsListElements.appendChild(li);
     });
