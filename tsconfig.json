@@ -1,7 +1,7 @@
   {
   "compilerOptions": {
-    "target": "ESNext",             
-    "module": "ESNext",          
+    "target": "es6",             
+    "module": "es6",          
     "outDir": "./scripts",         
     "rootDir": "./scripts",          
     "strict": true,              
@@ -10,5 +10,5 @@
     "skipLibCheck": true
   },
   "include": ["scripts"],            
-  "exclude": ["node_modules"]    
+  "exclude": [""]    
 }

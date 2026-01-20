@@ -8,11 +8,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="width=device-width" />
     <link rel="stylesheet" href="styles/global.css">
-
+    <link rel="icon" href="df.png" type="image/png" />
+    <link rel="stylesheet" href="styles/codetheme.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
 </head>
 
 <body>
-
     <div class="navigation"> <!-- nav bar -->
         <div class="left-items">
             <a href="./index.html">home/</a>
@@ -26,13 +27,24 @@
     </div> <!-- nav bar end-->
 
     <h1>blog</h1> <!-- page info -->
-
     <div class="center-box">
-        <div id="content"></div>
-        <script src="./scripts/displayPost.js" type="module"></script>
-    </div>
+        <div id="content">
+            <script type="module" src="./scripts/displayPost.js"></script>
+
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                // Wait for the markdown parsing to complete
+                document.addEventListener('markdownParsed', () => {
+                    hljs.highlightAll();
+                });
+            });
+        </script>
 
     </div>
+
+
 
 </body>
 

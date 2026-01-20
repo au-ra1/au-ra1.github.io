@@ -3,6 +3,7 @@
 		--color: rgb(107, 107, 107);  /*text colour var*/
 		--color-nav: #e7e5ce; /*Navbar background colour var*/
     --color-border: #c6c7bd; /* border colour for centre box */
+    
        }
 
 [data-theme = "dark"] {
@@ -10,6 +11,7 @@
     --color: rgb(211, 211, 211);
     --color-nav: #1f1f1f;
     --color-border: #5a5a5a;
+
       }
 
       
@@ -68,7 +70,8 @@ ul {
 .center-box {
   align-self: center;
   padding: 10px;
-  box-sizing: border-box;
+  width: 40%;
+  
 }
 
 /* nav bar */
@@ -101,4 +104,4 @@ button {
 }
     
     
-    
+

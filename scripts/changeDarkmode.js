@@ -13,7 +13,8 @@ button.addEventListener("click", () => {
     updateHTML(newTheme);
 });
 function getTheme() {
-    const a = document.querySelector("html")?.getAttribute("data-theme");
+    var _a;
+    const a = (_a = document.querySelector("html")) === null || _a === void 0 ? void 0 : _a.getAttribute("data-theme");
     return a;
 }
 function updateLocalStorage(theme) {
